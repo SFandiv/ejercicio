@@ -17,6 +17,7 @@ function dibujar() {
  * @param {number} x 
  * @param {number} y 
  */
+}
 function plot(x, y) {
     ctx.fillRect(x, canvas.height - y, 1, 1);
 }
@@ -91,7 +92,7 @@ function bresenham(x0, y0, x1, y1, plot) {
     }
 }
 function dibujarEscala() {
-    ctx.font = "10px Arial";
+    ctx.font = "10px Arial";    
     for (let i = 0; i <= canvas.width; i += 20) {
         ctx.fillText(i, i, canvas.height - 5);
     }
