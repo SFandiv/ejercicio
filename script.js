@@ -31,7 +31,7 @@ function bresenham(x0, y1, x1, y0, plot) {
     let err = dx - dy;
 
     while (true) {
-        
+
         plot(x0, y0);
 
         if (x0 === x1 && y0 === y1) break;
@@ -45,5 +45,15 @@ function bresenham(x0, y1, x1, y0, plot) {
             y0 += sy;
         }
     }
+}
+function dibujar() {
+    limpiarCanvas();
+
+    let x0= parseInt(document.getElementById("x0").value);
+    let y0= parseInt(document.getElementById("y0").value);
+    let x1= parseInt(document.getElementById("x1").value);
+    let y1= parseInt(document.getElementById("y1").value);
+
+    bresenham(x0, y0, x1, y1, plot);
 }
 }
