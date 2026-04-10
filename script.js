@@ -73,4 +73,3 @@ function dibujarEscala() {
         ctx.fillText(i, 0, canvas.height - i);
     }
 }
-}
