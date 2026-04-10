@@ -48,6 +48,8 @@ function bresenham(x0, y0, x1, y1, plot) {
 }
 function dibujar() {
     limpiarCanvas();
+    limpiarCanvas();
+    dibujarEscala();
 
     let x0= parseInt(document.getElementById("x0").value);
     let y0= parseInt(document.getElementById("y0").value);
@@ -86,6 +88,15 @@ function bresenham(x0, y0, x1, y1, plot) {
             err += dx;
             y0 += sy;
         }
+    }
+}
+function dibujarEscala() {
+    ctx.font = "10px Arial";
+    for (let i = 0; i <= canvas.width; i += 20) {
+        ctx.fillText(i, i, canvas.height - 5);
+    }
+    for (let i = 0; i <= canvas.height; i += 20) {
+        ctx.fillText(i, 0, canvas.height - i);
     }
 }
 }
